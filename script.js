@@ -183,7 +183,7 @@ function showClaimInfo() {
     let docType = detectDocumentType(fileName, fileType);
 
     updateClaimInfo(docType, "Processing Completed", `
-        <p><strong>File Name:</strong> ${fileName}</p>
+        <p><strong>Document Name:</strong> ${fileName}</p>
         <p><strong>File Type:</strong> ${fileType || "Unknown"}</p>
         <p><strong>Upload Time:</strong> ${new Date().toLocaleString()}</p>
     `);
@@ -210,3 +210,26 @@ function updateClaimInfo(docType, status, extractedData) {
 function restartUpload() {
     location.reload();
 }
+
+document.querySelector("#uploadBtn").addEventListener("click", async () => {
+    const fileInput = document.querySelector("#fileInput");
+    const file = fileInput.files[0];
+    const formData = new FormData();
+    formData.append("file", file);
+  
+    const response = await fetch("http://127.0.0.1:8000/upload/", {
+      method: "POST",
+      body: formData,
+    });
+  
+    const result = await response.json();
+    console.log(result);
+  
+    // Update UI with result
+    document.querySelector("#resultBox").innerHTML = `
+      <h3>📄 File: ${result.filename}</h3>
+      <p>Status: ${result.status}</p>
+      <p>Info: ${result.info}</p>
+    `;
+  });
+  
