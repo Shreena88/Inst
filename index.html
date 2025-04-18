@@ -56,19 +56,18 @@
                 <div class="upload-section">
                     <h2>Upload Your Document</h2>
                     <p>Supports: PDFs, JPGs, PNGs, DOCX (Multiple files allowed)</p>
-
                     <form id="uploadForm" enctype="multipart/form-data">
                         <input type="file" id="fileInput" accept=".pdf,.jpg,.png,.docx" multiple>
                         <button type="button" onclick="uploadFile()">Upload</button>
                         <p id="uploadStatus"></p>
                     </form>
-
+                    
                     <div id="filePaths">
                         <h3>Uploaded Documents</h3>
-                        <button id="showFilesBtn">View Uploaded Files</button>
-                        <div id="filePathList" style="display: none;"></div> <!-- Initially hidden -->
+                        <button id="showFilesBtn">View Selected File</button>
+                        <div id="filePathList" style="display: none;"></div>
                     </div>
-
+                    
                 </div>
             </div>
 

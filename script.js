@@ -112,6 +112,10 @@ function login() {
         message.innerHTML = "Invalid username or password!";
     }
 }
+document.querySelector("#showFilesBtn").addEventListener("click", () => {
+    document.querySelector("#filePathList").style.display = "block";
+  });
+  
 
 // Upload & Process File
 function uploadFile() {
@@ -164,6 +168,47 @@ function startProgressBar() {
         }
     }, 300);
 }
+let selectedFiles = [];
+
+document.getElementById("fileInput").addEventListener("change", (event) => {
+    selectedFiles = Array.from(event.target.files); // Store files
+});
+
+document.getElementById("showFilesBtn").addEventListener("click", () => {
+    const filePathList = document.getElementById("filePathList");
+
+    if (selectedFiles.length === 0) {
+        filePathList.style.display = "block";
+        filePathList.innerHTML = `<p style="color:red;">⚠️ No file selected</p>`;
+        return;
+    }
+
+    filePathList.style.display = "block";
+    filePathList.innerHTML = "";
+
+    selectedFiles.forEach((file, index) => {
+        const fileItem = document.createElement("div");
+        fileItem.style.cssText = "display:flex; justify-content:space-between; align-items:center; background:#0f3461e6; padding:8px; border-radius:5px; margin-bottom:5px;";
+        fileItem.innerHTML = `
+            <span>📁 ${file.name}</span>
+            <span style="cursor:pointer; color:red; font-weight:bold;" onclick="removeFile(${index})">❌</span>
+        `;
+        filePathList.appendChild(fileItem);
+    });
+});
+
+function removeFile(index) {
+    selectedFiles.splice(index, 1); // Remove file
+    updateFileInput();  // Update the file input element with the updated files
+    document.getElementById("showFilesBtn").click(); // Refresh UI
+}
+
+function updateFileInput() {
+    const dataTransfer = new DataTransfer();
+    selectedFiles.forEach(file => dataTransfer.items.add(file));
+    document.getElementById("fileInput").files = dataTransfer.files;  // Update file input's files
+}
+
 
 // Show Claim Info
 function showClaimInfo() {
