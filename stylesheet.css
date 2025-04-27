@@ -858,7 +858,7 @@ body.login-active .navbar {
 /* Tablet Devices (601px to 1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
     .navbar {
-        right: 200px;
+        right: 280px;
         top: 40px;
     }
 
@@ -873,15 +873,15 @@ body.login-active .navbar {
     .image {
         position: relative;
         top: 25%;
-        left: 5%;
+        left: -23%;
         max-width: 80%;
         margin-left: -5%;
     }
 
     .content {
         position: absolute;
-        right: -35%;
-        top: 30%;
+        right: -0px;
+        top: 40%;
         max-width: 45%;
     }
 
@@ -897,7 +897,7 @@ body.login-active .navbar {
         width: 85%;
         padding: 20px;
         margin-top:10%;
-        margin-right: -5%;
+        margin-right: 9%;
     }
 
     .flip-card {
@@ -930,18 +930,18 @@ body.login-active .navbar {
         position: relative;
         max-width: 80%;
         margin: 20px auto;
-        left: 3%;
+        left: 15%;
         top: 8%;
     }
 
     .content {
         position: relative;
-        right: auto;
+        right: -28px;
         top: auto;
         max-width: 100%;
-        margin: 20px auto;
+        margin: -70px auto;
         padding: 0 15px;
-    }
+    }   
 
     .content h1 {
         font-size: 24px;
@@ -958,8 +958,9 @@ body.login-active .navbar {
 
     .upload-section, .extract-section {
         width: 95%;
-        padding: 25px;
-        margin-top: 80%;
+        padding: 20px;
+        margin-top: 20%;
+        margin-right: -8%;
     }
 
     .upload-section h2, .extract-section h2 {
