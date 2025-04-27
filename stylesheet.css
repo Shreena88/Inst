@@ -10,11 +10,12 @@ html, body {
     background-attachment: fixed; /* Parallax Effect */
     color: white;
     scroll-behavior: smooth;
+    
 }
 
 /* Ensure container is centered */
 .container {
-    max-width: 600px;
+    max-width: 600px;   
     margin: auto;
     padding: 10px;
     z-index: 2;
@@ -55,6 +56,8 @@ html, body {
     padding: 10px 15px;
 }
 
+
+
 /* Hover Effect for Navigation Links */
 .navbar li::after {
     content: "";
@@ -71,6 +74,7 @@ html, body {
 .navbar a:hover {
     color: #ff4081;
 }
+
 
 
 /* LogIn Button Special Styling */
@@ -120,54 +124,6 @@ html, body {
 
 .hidden {
     transform: translateY(-100px); /* Moves navbar & logo out of view */
-}
-@media (max-width: 500px) {
-    /* Ensure Navbar Stays in One Line */
-    .navbar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 10px;
-        left: 0;
-        right: 0;
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    .navbar ul {
-        display: flex;
-        flex-direction: row;  /* Ensures Home & Log In stay in one line */
-        justify-content: center;
-        align-items: center;
-        gap: 20px; /* Space between items */
-        padding: 0;
-        list-style: none;
-        margin-right: -5%;
-    }
-
-    .navbar a {
-        font-size: 16px;
-        padding: 5px 10px;
-        white-space: nowrap; /* Prevents text from wrapping */
-
-    }
-
-    /* Ensure Login Button is in Line */
-    .login-btn {
-        display: inline-block;
-        padding: 8px 16px;
-        font-size: 16px;
-        border-radius: 6px;
-    }
-
-    /* Adjust Logo */
-    #logo {
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        font-size: 20px;
-    }
 }
 /*Home section*/
 
@@ -250,59 +206,6 @@ html, body {
 }
 
  
-
-
-/* Mobile (500px and below) */
-@media (max-width: 500px) {
-    .main-container {
-        height: auto;
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .upload-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        text-align: left;
-        width: 100%;
-    }
-
-    .image {
-        max-width: 70%; /* Medium-sized image on phones */
-        position: relative;
-        left: 0;
-        top: 5%;
-        transform: none;
-        margin-left: -5%;
-    }
-
-    .content {
-        max-width: 50%;
-        text-align: center;
-        font-size: 18px;
-        margin-right: -80%;
-        margin-top: -60px;
-        gap: 4px;
-    }
-
-    .content h1 {
-        font-size: 22px;
-    }
-
-    .content p {
-        font-size: 16px;
-    }
-
-    .scroll-down {
-        font-size: 16px;
-        padding: 8px 20px;
-    }
-}
 
 /*Upload section*/
 .upload-section {
@@ -414,52 +317,6 @@ html, body {
 }
 
 
-/* Mobile (500px and below) */
-@media (max-width: 500px) {
-    .upload-section {
-        width: 90%;
-        max-width: 400px;
-        padding: 20px;
-        margin: auto;
-        margin-left: 45%;
-    }
-
-    .upload-section h2 {
-        font-size: 26px;
-        text-align: center;
-    }
-
-    .upload-section p {
-        font-size: 14px;
-        text-align: center;
-    }
-
-    #uploadForm {
-        width: 100%;
-        max-width: 360px;
-        padding: 15px;
-        border-radius: 10px;
-    }
-
-    #filePaths {
-        max-width: 360px;
-        padding: 10px;
-    }
-
-    #filePathList li {
-        font-size: 14px;
-        padding: 6px;
-    }
-
-    /* Adjust File Input */
-    #fileInput {
-        width: 100%;
-        font-size: 14px;
-        padding: 8px;
-    }
-
-}
-
 /* Extract Section */
 
 .extract-section {
@@ -534,12 +391,6 @@ html, body {
     display: none; /* Initially hidden */
 }
 
-/* Extracted Details Text */
-#extractedData {
-    font-size: 18px;
-    color: white;
-    font-weight: bold;
-}
 
   /* Buttons */
   button {
@@ -704,7 +555,7 @@ button:active {
 
 /* Claim Info Box */
 .claim-info-box {
-    background: rgba(0, 0, 0, 0.4); /* Dark transparent background */
+    background: rgba(0, 0, 0, 0.4);
     padding: 15px;
     border-radius: 8px;
     text-align: left;
@@ -1000,4 +851,151 @@ input::placeholder {
 /* Hide Navbar When Login Box is Open */
 body.login-active .navbar {
     display: none;
+}
+
+/* ... existing code ... */
+
+/* Tablet Devices (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .navbar {
+        right: 200px;
+        top: 40px;
+    }
+
+    .navbar ul {
+        gap: 25px;
+    }
+
+    .navbar a {
+        font-size: 18px;
+    }
+
+    .image {
+        position: relative;
+        top: 25%;
+        left: 5%;
+        max-width: 80%;
+        margin-left: -5%;
+    }
+
+    .content {
+        position: absolute;
+        right: -35%;
+        top: 30%;
+        max-width: 45%;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+
+    .upload-section, .extract-section {
+        width: 85%;
+        padding: 20px;
+        margin-top:10%;
+        margin-right: -5%;
+    }
+
+    .flip-card {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Mobile Devices (600px and below) */
+@media (max-width: 600px) {
+    .navbar {
+        top: 3%;
+        left: -15%;
+    }
+
+    .navbar ul {
+        gap: 15px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+    .main-container {
+        height: auto;
+        padding: 60px 15px 20px;
+    }
+
+    .image {
+        position: relative;
+        max-width: 80%;
+        margin: 20px auto;
+        left: 3%;
+        top: 8%;
+    }
+
+    .content {
+        position: relative;
+        right: auto;
+        top: auto;
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .content h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+    #uploadForm {
+        width: 94%;
+        padding: 10px;
+    }
+
+    .upload-section, .extract-section {
+        width: 95%;
+        padding: 25px;
+        margin-top: 80%;
+    }
+
+    .upload-section h2, .extract-section h2 {
+        font-size: 24px;
+    }
+
+    .flip-card {
+        width: 130px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .login-container {
+        width: 90%;
+        max-width: 320px;
+        padding: 20px;
+    }
+}
+
+
+/* Mobile Landscape Mode */
+@media (max-width: 600px) and (orientation: landscape) {
+    .main-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .image {
+        max-width: 55%;
+        margin: 10px;
+    }
+
+    .content {
+        width: 45%;
+        margin: 10px;
+    }
 }
