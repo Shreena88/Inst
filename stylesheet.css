@@ -4,10 +4,10 @@ html, body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, rgba(26, 26, 46, 0.9), hsla(224, 48%, 16%, 0.9), #0f3461e6), 
-                url('Dec.png'); /* Gradient Overlay with Background Image */
+                url('Dec.png'); 
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Parallax Effect */
+    background-attachment: fixed;
     color: white;
     scroll-behavior: smooth;
     
@@ -28,7 +28,7 @@ html, body {
     top: 40px;
     right: 90px;
     display: flex;
-    justify-content: flex-end; /* Align navbar contents to the right */
+    justify-content: flex-end; 
     width: auto;
     z-index: 1000;
 }
@@ -38,7 +38,7 @@ html, body {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: flex-end; /* Ensures list items align to the right */
+    justify-content: flex-end;
     gap: 45px;
 }
 
@@ -56,30 +56,21 @@ html, body {
     padding: 10px 15px;
 }
 
-
-
 /* Hover Effect for Navigation Links */
 .navbar li::after {
     content: "";
     position: absolute;
     width: 0;
     height: 3px;
-    background-color: #ff4081; /* Dark pink hover effect */
+    background-color: #ff4081; 
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 }
 
-
-.navbar a:hover {
-    color: #ff4081;
-}
-
-
-
 /* LogIn Button Special Styling */
 .login-btn {
-    background: #ff4081; /* Dark Pink */
+    background: #ff4081;
     padding: 10px 20px;
     border-radius: 8px;
     color: white;
@@ -87,20 +78,16 @@ html, body {
     transition: 0.3s ease-in-out;
 }
 
-/* Hover Effect for LogIn Button */
 .login-btn:hover {
     background: white;
     color: #ff4081;
     box-shadow: 0px 0px 10px rgba(255, 64, 129, 0.5);
 }
 
-
-
-
 #logo {
-    position: fixed; /* Stays in the same position even when scrolling */
-    top: 20px; /* Moves it down slightly */
-    left: 20px; /* Positions it at the top-left */
+    position: fixed;
+    top: 20px; 
+    left: 20px; 
     display: flex;
     align-items: center;
     font-size: 24px;
@@ -108,60 +95,59 @@ html, body {
     color: white;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-    padding-left: 10px; /* Adds spacing to avoid touching screen edges */
-    z-index: 1000; /* Ensures it stays above other elements */
+    padding-left: 10px; 
+    z-index: 1000; 
 }
 
 #logo .icon {
-    color: #ff4081; /* Dark Pink on hover */
+    color: #ff4081; 
 }
 .navbar, #logo {
-    position: fixed; /* Keeps navbar & logo fixed at the top */
+    position: fixed;
     top: 40px;
     width: 100%;
-    transition: transform 0.4s ease-in-out; /* Smooth slide effect */
+    transition: transform 0.4s ease-in-out; 
 }
 
 .hidden {
-    transform: translateY(-100px); /* Moves navbar & logo out of view */
+    transform: translateY(-100px); 
 }
 /*Home section*/
 
 .main-container {
-    height: 100vh; /* Full height */
-    padding: 10px; /* Prevents content from sticking to edges */
-
+    height: 100vh; 
+    padding: 10px; 
 }
 
 .upload-container {
-    align-items: center; /* Vertically centers the image */
-    height: 80vh; /* Full height */
+    align-items: center;
+    height: 80vh;
 }
 
 .image {
     position: absolute;
-    top: 18%; /* Adjusts vertical placement */
+    top: 18%; 
     left: 14%;
-    max-width: 29%; /* Ensures image stays within container */
-    border-radius: 10px; /* Adds rounded corners */
+    max-width: 29%; 
+    border-radius: 10px; 
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* Hover Effect */
 .image:hover {
-    transform: scale(1.05); /* Slight zoom-in effect */
-    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.6); /* Enhanced white glow on hover */
-    border-color: white; /* Change border color to white on hover */
-    filter: drop-shadow(0px 0px 10px white); /* Adds a shine effect */
+    transform: scale(1.05); 
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.6);
+    border-color: white; 
+    filter: drop-shadow(0px 0px 10px white); 
 }
 
 
 .content {
     position: absolute;
-    right: 15vw; /* Keeps it aligned to the right */
-    top: 30vh; /* Adjusts vertical placement */
-    max-width: 500px; /* Prevents it from stretching too much */
-    text-align: center; /* Aligns text inside */
+    right: 15vw;
+    top: 30vh;
+    max-width: 500px; 
+    text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
     letter-spacing: 1px;
@@ -171,9 +157,9 @@ html, body {
 
 /* Heading Styling */
 .content h1 {
-    font-size: 32px; /* Larger for emphasis */
+    font-size: 32px; 
     font-weight: bold;
-    color: #ff4081; /* Dark pink for contrast */
+    color: #ff4081; 
     text-transform: uppercase;
     letter-spacing: 1px;
     bottom: 34px;
@@ -181,7 +167,7 @@ html, body {
 
 /* Paragraph Styling */
 .content p {
-    font-size: 25px; /* Slightly bigger for better readability */
+    font-size: 25px; 
     font-weight: 300;
     margin-bottom: 20px;
 }
@@ -313,7 +299,7 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     overflow-y: auto;
-    max-height: 200px; /* Allows scrolling for long lists */
+    max-height: 200px; 
 }
 
 
@@ -388,7 +374,7 @@ html, body {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     text-align: center;
-    display: none; /* Initially hidden */
+    display: none;
 }
 
 
@@ -446,7 +432,7 @@ button {
     transition: 0.3s ease-in-out;
     margin-top: 10px;
     margin-bottom: 34px;
-    box-shadow: 0px 4px 10px rgba(255, 64, 129, 0.4); /* Soft box shadow */
+    box-shadow: 0px 4px 10px rgba(255, 64, 129, 0.4);
     font-weight: bold;
 }
 
@@ -454,8 +440,8 @@ button {
 button:hover {
     background: white;
     color: #ff4081;
-    box-shadow: 0px 2px 8px rgba(255, 64, 129, 0.6); /* Smaller shadow for pressed effect */
-    transform: translateY(2px); /* Slightly moves down */
+    box-shadow: 0px 2px 8px rgba(255, 64, 129, 0.6);
+    transform: translateY(2px);
 }
 
 /* Active Effect - Deep Pressed Look */
@@ -465,7 +451,7 @@ button:active {
 }
 
 .flip-card {
-    perspective: 1200px; /* Stronger 3D effect */
+    perspective: 1200px; 
     width: 300px;
     height: 300px;
     position: relative;
@@ -478,8 +464,8 @@ button:active {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform 0.8s ease-in-out; /* Smooth transition */
-    transform: rotateY(0deg); /* Initial state */
+    transition: transform 0.8s ease-in-out; 
+    transform: rotateY(0deg); 
 }
 
 .flip-card:hover .flip-card-inner {
@@ -493,7 +479,7 @@ button:active {
     position: absolute;
     width: 300%;
     height: 90%;
-    border-radius: 15px; /* Consistent shape */
+    border-radius: 15px; 
     backface-visibility: hidden;
     display: flex;
     justify-content: center;
@@ -631,8 +617,6 @@ button:active {
         transform: translateY(0);
     }
 }
-
-
 
 /* Extracted Info Box - Matches Upload Section */
 .extracted-info-box {
@@ -794,11 +778,10 @@ input::placeholder {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* Hide Navbar When Login Box is Open */
 body.login-active .navbar {
     display: none;
 }
-/* Hide Login Box Initially */
+
 .login-overlay, .login-container {
     display: none; /* Hidden by default */
 }
@@ -853,7 +836,6 @@ body.login-active .navbar {
     display: none;
 }
 
-/* ... existing code ... */
 
 /* Tablet Devices (601px to 1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
